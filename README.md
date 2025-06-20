@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Ambulance Tracker – Static Map with Animation and Stepper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates a ambulance's movement on a map using React and Leaflet. It simulates the ambulance's journey from Hospital (starting point) and Accident Site (ending point) along a predefined route. The simulation is triggered when app loads, and the ambulance icon moves along the route in real-time.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Displays a map using Leaflet.
+- Simulates ambulance movement from a starting point to an ending point.
+- Displays the complete route on the map with a polyline.
+- Updates the ambulance's position on the map in real-time.
+- A button to replay the simulation, resetting the ambulance to the starting point.
+- Ambulance car icon for the moving vehicle.
+- Shows the progress using a stepper component.
+- Shows a progress bar.
+- Play sound on arrival.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js (>= 14.x)
+- npm (>= 6.x) or yarn (>= 1.x)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/BilalKarim89/ambulance-tracker
+   cd ambulance-tracker
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
 
-### `npm run eject`
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open the application in your browser:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   http://localhost:3000
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. The application will load with a map centered at the starting point of the route.
+2. Click the "Replay Trip" button to re-start the simulation.
+3. The ambulance icon will move along the predefined route from the starting point to the ending point.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/components/MapComponent.js`: Contains the map component that handles the rendering of the Leaflet map, ambulance icon, and simulation logic.
+- `src/components/StepperComponent.js`: Contains the stepper component.
+- `public/index.html`: The main HTML file that includes the root `div` where the React app is rendered.
+- `src/index.js`: Entry point for the React application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Customization
 
-### Code Splitting
+### Changing the Ambulance Icon
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To change the ambulance icon, update the `iconUrl` in the `ambulanceIcon` configuration:
 
-### Analyzing the Bundle Size
+```javascript
+const ambulanceIcon = new L.Icon({
+  iconUrl: 'your-icon-url', // Replace with your ambulance icon URL
+  iconSize: [48, 48],
+  iconAnchor: [24, 44],
+});
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Dependencies
 
-### Making a Progressive Web App
+- [React](https://reactjs.org/)
+- [React Leaflet](https://react-leaflet.js.org/)
+- [Leaflet](https://leafletjs.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Leaflet Documentation](https://leafletjs.com/)
+- [React Leaflet Documentation](https://react-leaflet.js.org/)

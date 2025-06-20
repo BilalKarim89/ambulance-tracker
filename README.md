@@ -9,7 +9,7 @@ This project demonstrates a ambulance's movement on a map using React and Leafle
 - Displays the complete route on the map with a polyline.
 - Updates the ambulance's position on the map in real-time.
 - A button to replay the simulation, resetting the ambulance to the starting point.
-- Ambulance car icon for the moving vehicle.
+- Ambulance icon for the moving vehicle.
 - Shows the progress using a stepper component.
 - Shows a progress bar.
 - Play sound on arrival.
@@ -84,10 +84,6 @@ const ambulanceIcon = new L.Icon({
 - [React](https://reactjs.org/)
 - [React Leaflet](https://react-leaflet.js.org/)
 - [Leaflet](https://leafletjs.com/)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
